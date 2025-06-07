@@ -6,12 +6,7 @@ require("dotenv").config();
 const app = express();
 const PORT = process.env.PORT || 3001;
 
- app.use(cors({
-  origin: "https://take-movie-website.vercel.app",
-  optionsSuccessStatus: 200,
-  methods: ["GET", "POST", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"],
-}));
+app.use(cors());
  
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
