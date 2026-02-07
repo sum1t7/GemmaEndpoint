@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.use(cors({
-  origin: "https://thetake.vercel.app", 
+  origin: "https://thetake.in", 
 }));
 app.use(express.json({ limit: "10mb" }));
 
